@@ -23,7 +23,6 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.JToolBar;
 import punto2.guihelpers.GBHelper;
 import punto2.guihelpers.Gap;
 
@@ -38,7 +37,7 @@ public class frmCourse extends JDialog implements ActionListener, MouseListener{
     private JButton btnClose, btnSave, btnLoadStudents;
     private Course course;
     private JList lstStudents;
-    private Frame owner;
+    private final Frame owner;
     private final boolean added;
     
     public frmCourse(Frame owner, Course course){
@@ -75,7 +74,7 @@ public class frmCourse extends JDialog implements ActionListener, MouseListener{
         setLocationRelativeTo(owner);
         setVisible(true);
         setResizable(false);
-        setSize(300, 300);
+        pack();
     }
     
     private JPanel pnlMain(){
