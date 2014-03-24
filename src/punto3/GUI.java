@@ -4,6 +4,8 @@
  */
 package punto3;
 
+import punto2.guihelpers.GBHelper;
+import punto2.guihelpers.Gap;
 import java.awt.BorderLayout;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
