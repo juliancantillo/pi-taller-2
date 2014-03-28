@@ -109,6 +109,7 @@ public class Word implements Cloneable{
     public void resetWord(){
         this.correctLetters = new StringBuffer();
         this.wrongLetters = new StringBuffer();
+        wrongLetters.delete(0, lenght);
     }
     
     public String getWrongLetters(){

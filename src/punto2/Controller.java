@@ -7,7 +7,6 @@
 package punto2;
 
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
 
 /**
  * Universidad del Valle

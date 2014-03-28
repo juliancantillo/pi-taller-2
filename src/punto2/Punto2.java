@@ -16,8 +16,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class Punto2 {
     
     public static Controller controller;
-    private frmStudent student;
-    private GUI gui;
+    private final GUI gui;
     
     public Punto2() {
         controller = new Controller();
@@ -25,11 +24,7 @@ public class Punto2 {
         
         gui = new GUI();
     }
-    
-    public void initMenu(){
         
-    }
-    
     /**
     * @param args the command line arguments
     */
@@ -40,6 +35,5 @@ public class Punto2 {
         }catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) { }
         
         Punto2 obj = new Punto2();
-        obj.initMenu();
     }
 }

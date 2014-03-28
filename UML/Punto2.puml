@@ -1,0 +1,193 @@
+@startuml
+annotation java.lang.Override
+class java.awt.BorderLayout
+class java.awt.Dimension
+class java.awt.FlowLayout
+class java.awt.Frame
+class java.awt.GridBagConstraints
+class java.awt.GridBagLayout
+class java.awt.GridLayout
+class java.awt.event.ActionEvent
+class java.awt.event.KeyEvent
+class java.awt.event.MouseEvent
+class java.net.URL
+class java.util.ArrayList
+class java.util.Arrays
+class java.util.Random
+class java.util.logging.Level
+class java.util.logging.Logger
+class javax.swing.BorderFactory
+class javax.swing.ImageIcon
+class javax.swing.JButton
+class javax.swing.JComboBox
+class javax.swing.JComponent
+class javax.swing.JDialog
+class javax.swing.JFrame
+class javax.swing.JLabel
+class javax.swing.JList
+class javax.swing.JOptionPane
+class javax.swing.JPanel
+class javax.swing.JTabbedPane
+class javax.swing.JTextArea
+class javax.swing.JTextField
+class javax.swing.JToolBar
+class javax.swing.UIManager
+class javax.swing.UnsupportedLookAndFeelException
+class javax.swing.event.ListSelectionEvent
+class punto1.ChatForm
+class punto1.EventHandlers
+class punto1.JFrame
+class punto1.Quiz
+class punto1.R
+class punto2.Controller
+class punto2.Course
+class punto2.Enrolment
+class punto2.GUI
+class punto2.Punto2
+class punto2.R
+class punto2.Student
+class punto2.frmCourse
+class punto2.frmEnrolment
+class punto2.frmStudent
+class punto2.guihelpers.GBHelper
+class punto2.guihelpers.Gap
+class punto3.GUI
+class punto3.Punto3
+class punto3.R
+class punto3.Word
+class punto3.WordList
+class taller2.Taller2
+interface java.awt.event.ActionListener
+interface java.awt.event.KeyListener
+interface java.awt.event.MouseListener
+interface java.lang.Cloneable
+interface javax.swing.event.ListSelectionListener
+interface punto1.ActionListener
+interface punto1.FocusListener
+interface punto1.KeyListener
+interface punto1.MouseListener
+punto1.ChatForm ..> java.awt.BorderLayout
+punto1.ChatForm ..> java.awt.GridLayout
+punto1.ChatForm ..> java.util.ArrayList
+punto1.ChatForm --|> punto1.JFrame
+punto1.EventHandlers ..> java.lang.Override
+punto1.EventHandlers ..> javax.swing.JOptionPane
+punto1.EventHandlers --|> punto1.ActionListener
+punto1.EventHandlers --|> punto1.FocusListener
+punto1.EventHandlers --|> punto1.KeyListener
+punto1.EventHandlers --|> punto1.MouseListener
+punto2.Controller ..> java.util.ArrayList
+punto2.Controller ..> javax.swing.JOptionPane
+punto2.Course ..> java.lang.Override
+punto2.Enrolment ..> java.lang.Override
+punto2.GUI ..> java.lang.Override
+punto2.GUI ..> java.awt.BorderLayout
+punto2.GUI ..> java.awt.event.ActionEvent
+punto2.GUI ..> java.awt.event.MouseEvent
+punto2.GUI ..> javax.swing.BorderFactory
+punto2.GUI ..> javax.swing.JButton
+punto2.GUI --|> javax.swing.JFrame
+punto2.GUI ..> javax.swing.JList
+punto2.GUI ..> javax.swing.JPanel
+punto2.GUI ..> javax.swing.JTabbedPane
+punto2.GUI ..> javax.swing.JToolBar
+punto2.GUI ..> javax.swing.event.ListSelectionEvent
+punto2.GUI --|> java.awt.event.ActionListener
+punto2.GUI --|> java.awt.event.MouseListener
+punto2.GUI --|> javax.swing.event.ListSelectionListener
+punto2.Punto2 ..> javax.swing.UIManager
+punto2.Punto2 ..> javax.swing.UnsupportedLookAndFeelException
+punto2.Student ..> java.lang.Override
+punto2.Student ..> java.util.ArrayList
+punto2.frmCourse ..> java.lang.Override
+punto2.frmCourse ..> java.awt.BorderLayout
+punto2.frmCourse ..> java.awt.FlowLayout
+punto2.frmCourse ..> java.awt.Frame
+punto2.frmCourse ..> java.awt.GridBagLayout
+punto2.frmCourse ..> java.awt.event.ActionEvent
+punto2.frmCourse ..> java.awt.event.MouseEvent
+punto2.frmCourse ..> javax.swing.BorderFactory
+punto2.frmCourse ..> javax.swing.JButton
+punto2.frmCourse --|> javax.swing.JDialog
+punto2.frmCourse ..> javax.swing.JFrame
+punto2.frmCourse ..> javax.swing.JLabel
+punto2.frmCourse ..> javax.swing.JList
+punto2.frmCourse ..> javax.swing.JOptionPane
+punto2.frmCourse ..> javax.swing.JPanel
+punto2.frmCourse ..> javax.swing.JTextField
+punto2.frmCourse ..> punto2.guihelpers.GBHelper
+punto2.frmCourse ..> punto2.guihelpers.Gap
+punto2.frmCourse --|> java.awt.event.ActionListener
+punto2.frmCourse --|> java.awt.event.MouseListener
+punto2.frmEnrolment ..> java.lang.Override
+punto2.frmEnrolment ..> java.awt.BorderLayout
+punto2.frmEnrolment ..> java.awt.FlowLayout
+punto2.frmEnrolment ..> java.awt.Frame
+punto2.frmEnrolment ..> java.awt.GridBagLayout
+punto2.frmEnrolment ..> java.awt.event.ActionEvent
+punto2.frmEnrolment ..> javax.swing.BorderFactory
+punto2.frmEnrolment ..> javax.swing.JButton
+punto2.frmEnrolment ..> javax.swing.JComboBox
+punto2.frmEnrolment --|> javax.swing.JDialog
+punto2.frmEnrolment ..> javax.swing.JFrame
+punto2.frmEnrolment ..> javax.swing.JLabel
+punto2.frmEnrolment ..> javax.swing.JOptionPane
+punto2.frmEnrolment ..> javax.swing.JPanel
+punto2.frmEnrolment ..> javax.swing.JTextField
+punto2.frmEnrolment ..> punto2.guihelpers.GBHelper
+punto2.frmEnrolment ..> punto2.guihelpers.Gap
+punto2.frmEnrolment --|> java.awt.event.ActionListener
+punto2.frmStudent ..> java.lang.Override
+punto2.frmStudent ..> java.awt.BorderLayout
+punto2.frmStudent ..> java.awt.FlowLayout
+punto2.frmStudent ..> java.awt.Frame
+punto2.frmStudent ..> java.awt.GridBagLayout
+punto2.frmStudent ..> java.awt.event.ActionEvent
+punto2.frmStudent ..> java.awt.event.MouseEvent
+punto2.frmStudent ..> javax.swing.BorderFactory
+punto2.frmStudent ..> javax.swing.JButton
+punto2.frmStudent ..> javax.swing.JComboBox
+punto2.frmStudent --|> javax.swing.JDialog
+punto2.frmStudent ..> javax.swing.JFrame
+punto2.frmStudent ..> javax.swing.JLabel
+punto2.frmStudent ..> javax.swing.JList
+punto2.frmStudent ..> javax.swing.JPanel
+punto2.frmStudent ..> javax.swing.JTabbedPane
+punto2.frmStudent ..> javax.swing.JTextField
+punto2.frmStudent ..> javax.swing.JToolBar
+punto2.frmStudent ..> javax.swing.event.ListSelectionEvent
+punto2.frmStudent ..> punto2.guihelpers.GBHelper
+punto2.frmStudent ..> punto2.guihelpers.Gap
+punto2.frmStudent --|> java.awt.event.ActionListener
+punto2.frmStudent --|> java.awt.event.MouseListener
+punto2.frmStudent --|> javax.swing.event.ListSelectionListener
+punto2.guihelpers.GBHelper --|> java.awt.GridBagConstraints
+punto2.guihelpers.Gap ..> java.awt.Dimension
+punto2.guihelpers.Gap --|> javax.swing.JComponent
+punto3.GUI ..> java.lang.Override
+punto3.GUI ..> java.awt.BorderLayout
+punto3.GUI ..> java.awt.GridBagLayout
+punto3.GUI ..> java.awt.GridLayout
+punto3.GUI ..> java.awt.event.ActionEvent
+punto3.GUI ..> java.awt.event.KeyEvent
+punto3.GUI ..> java.net.URL
+punto3.GUI ..> java.util.logging.Level
+punto3.GUI ..> java.util.logging.Logger
+punto3.GUI ..> javax.swing.BorderFactory
+punto3.GUI ..> javax.swing.ImageIcon
+punto3.GUI ..> javax.swing.JButton
+punto3.GUI --|> javax.swing.JFrame
+punto3.GUI ..> javax.swing.JLabel
+punto3.GUI ..> javax.swing.JOptionPane
+punto3.GUI ..> javax.swing.JPanel
+punto3.GUI ..> javax.swing.JTextArea
+punto3.GUI ..> punto2.guihelpers.GBHelper
+punto3.GUI ..> punto2.guihelpers.Gap
+punto3.GUI --|> java.awt.event.ActionListener
+punto3.GUI --|> java.awt.event.KeyListener
+punto3.Word ..> java.lang.Override
+punto3.Word ..> java.util.Arrays
+punto3.Word --|> java.lang.Cloneable
+punto3.WordList ..> java.util.ArrayList
+punto3.WordList ..> java.util.Random
+@enduml

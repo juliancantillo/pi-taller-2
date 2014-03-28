@@ -12,8 +12,6 @@ import java.awt.Frame;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -30,7 +28,7 @@ import punto2.guihelpers.Gap;
  * Universidad del Valle
  * @author Julian Andres Cantillo // cod: 1431263 - 3743
  */
-public class frmCourse extends JDialog implements ActionListener, MouseListener{
+public class frmCourse extends JDialog implements ActionListener{
 
     private JLabel lblName, lblCode, lblCredits;
     private JTextField fldName, fldCode, fldCredits;
@@ -140,7 +138,6 @@ public class frmCourse extends JDialog implements ActionListener, MouseListener{
         
         lstStudents = new JList();
         lstStudents.setSize(300, 300);
-        lstStudents.addMouseListener(this);
         
         panel.add(lstStudents, BorderLayout.CENTER);
         
@@ -200,22 +197,5 @@ public class frmCourse extends JDialog implements ActionListener, MouseListener{
         }
         
     }
-
-    @Override
-    public void mouseClicked(MouseEvent e) {
-        
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {}
-
-    @Override
-    public void mouseReleased(MouseEvent e) {}
-
-    @Override
-    public void mouseEntered(MouseEvent e) {}
-
-    @Override
-    public void mouseExited(MouseEvent e) {}
     
 }

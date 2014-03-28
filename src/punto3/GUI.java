@@ -67,6 +67,7 @@ public class GUI extends JFrame implements ActionListener, KeyListener{
         
         try {
             currentWord = (Word) tmp.clone();
+            currentWord.resetWord();
         } catch (CloneNotSupportedException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
         }

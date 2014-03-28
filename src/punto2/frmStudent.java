@@ -12,8 +12,6 @@ import java.awt.Frame;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -25,8 +23,6 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import punto2.guihelpers.GBHelper;
 import punto2.guihelpers.Gap;
 
@@ -34,9 +30,9 @@ import punto2.guihelpers.Gap;
  * Universidad del Valle
  * @author Julian Andres Cantillo // cod: 1431263 - 3743
  */
-public class frmStudent extends JDialog implements ActionListener, MouseListener, ListSelectionListener{
+public class frmStudent extends JDialog implements ActionListener{
 
-    private JLabel lblName, lblCode, lblCarrer;
+    private JLabel lblName, lblCode, lblCareer;
     private JTextField fldName, fldCode;
     private JComboBox slctCarrer;
     private JButton btnAccept, btnClose, btnSave, btnNewEnrolment;
@@ -46,7 +42,7 @@ public class frmStudent extends JDialog implements ActionListener, MouseListener
     private final boolean added;
     private final String CMD_UPDATE_ENROLMENT_LIST = "UPDATE_ENROLMENTS";
     private final String CMD_CREATE_NEW_ENROLMENT = "NEW_ENROLMENT";
-    private Frame owner;
+    private final Frame owner;
     
     public frmStudent(Frame owner, Student student){
         super(owner, R.STR_STUDENTS);
@@ -97,7 +93,7 @@ public class frmStudent extends JDialog implements ActionListener, MouseListener
         
         lblName = new JLabel(R.STR_CREATE_STUDENT_NAME);
         lblCode = new JLabel(R.STR_CREATE_STUDENT_CODE);
-        lblCarrer= new JLabel(R.STR_CREATE_STUDENT_CAREER);
+        lblCareer= new JLabel(R.STR_CREATE_STUDENT_CAREER);
         
         fldName = new JTextField(15);
         fldCode = new JTextField(15);
@@ -117,7 +113,7 @@ public class frmStudent extends JDialog implements ActionListener, MouseListener
         
         pnl.add(new Gap(R.VGAP) , pos.nextRow());
         
-        pnl.add(lblCarrer, pos.nextRow().nextCol());
+        pnl.add(lblCareer, pos.nextRow().nextCol());
         pnl.add(new Gap(R.HGAP), pos.nextCol());
         pnl.add(slctCarrer, pos.nextCol().expandW());
         
@@ -139,8 +135,6 @@ public class frmStudent extends JDialog implements ActionListener, MouseListener
         
         lstEnrolments = new JList();
         lstEnrolments.setSize(300, 300);
-        lstEnrolments.addListSelectionListener(this);
-        lstEnrolments.addMouseListener(this);
         
         studentsToolbar.add(btnNewEnrolment);
         studentsToolbar.add(btnUpdateCourses);
@@ -224,36 +218,5 @@ public class frmStudent extends JDialog implements ActionListener, MouseListener
         if(cmd.equals(CMD_UPDATE_ENROLMENT_LIST)){
             lstEnrolments.setListData( student.getEnrolments().toArray() );
         }
-    }
-
-    @Override
-    public void mouseClicked(MouseEvent e) {
-        
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-        
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-        
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-        
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-        
-    }
-
-    @Override
-    public void valueChanged(ListSelectionEvent e) {
-        
-    }
-    
+    } 
 }
