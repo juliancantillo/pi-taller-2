@@ -21,8 +21,11 @@ public class EventHandlers implements ActionListener, KeyListener, MouseListener
     
     public void Login(){
         String user = JOptionPane.showInputDialog(chat, R.NEW_USERNAME);
-        
-        chat.Login(user);
+        try {
+            chat.Login(user);
+        } catch (ChatExceptions ex) {
+            JOptionPane.showMessageDialog(chat, ex);
+        }
     }
 
     @Override
@@ -33,7 +36,11 @@ public class EventHandlers implements ActionListener, KeyListener, MouseListener
         }
         
         if(e.getSource() == chat.btnSend){
-            chat.addMessage( chat.fldInput.getText() );
+            try {
+                chat.addMessage( chat.fldInput.getText() );
+            } catch (ChatExceptions ex) {
+                JOptionPane.showMessageDialog(chat, ex.getMessage());
+            }
         }
         
         if(e.getSource() == chat.btnCleanChat){
@@ -41,9 +48,10 @@ public class EventHandlers implements ActionListener, KeyListener, MouseListener
         }
         
         if(e.getSource() == chat.btnLogout){
-            if(chat.comboConnectedUsers.getItemCount() > 0){
-                chat.addMessage("Ha dejado el chat");
-                chat.comboConnectedUsers.removeItemAt( chat.comboConnectedUsers.getSelectedIndex() );
+            try {
+                chat.Logout();
+            } catch (ChatExceptions ex) {
+                JOptionPane.showMessageDialog(chat, ex.getMessage());
             }
         }
     }
@@ -61,7 +69,11 @@ public class EventHandlers implements ActionListener, KeyListener, MouseListener
     @Override
     public void keyReleased(KeyEvent e) {
         if(e.getSource() == chat.fldInput && e.getKeyCode() == KeyEvent.VK_ENTER ){
-            chat.addMessage( chat.fldInput.getText() );
+            try {
+                chat.addMessage( chat.fldInput.getText() );
+            } catch (ChatExceptions ex) {
+                JOptionPane.showMessageDialog(chat, ex.getMessage());
+            }
         }
     }
 

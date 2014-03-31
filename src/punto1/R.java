@@ -20,6 +20,8 @@ public class R {
             CONNECTED_USERS = "Usuarios Conectados",
             NEW_USERNAME = "Ingrese Nombre y Apellido",
             NOT_EMPTY_MSG_ALLOWED = "No se pueden enviar mensajes vacíos",
-            MUST_BE_LOGED_IN = "Debe ingresar primero"
+            MUST_BE_LOGED_IN = "Debe ingresar primero haciendo uso del botón ingresar",
+            MSG_LOGOUT = "Ha dejado el chat",
+            NO_LOGGED_USERS_TO_LOGOUT = "No hay usuarios ingresados para expulsar"
             ;
 }
